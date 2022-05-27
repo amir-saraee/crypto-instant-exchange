@@ -1,0 +1,24 @@
+.section {
+    background-image: linear-gradient(-200deg,rgba(11,75,121,0.54) 0,#000810 100%),url(/bg-min.jpg);
+    background-color: #324654;
+    background-size: cover;
+    background-repeat: no-repeat;
+    position: relative;
+    color: #fff;
+    height: 590px;
+}
+
+.header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 1rem 3rem;
+}
+
+.logo {
+    & a {
+        color: #fff;
+        text-decoration: none;
+    }
+}
+

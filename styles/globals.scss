@@ -1,0 +1,25 @@
+* {
+  box-sizing: border-box;
+}
+
+@font-face{font-family:'Icons';font-display:block;src:url("/assets/fonts/icons/icons.woff2?2610") format("woff2"),url("/assets/fonts/icons/icons.woff?2610") format("woff"),url("/assets/fonts/icons/icons.ttf?2610") format("truetype")}
+
+
+html,
+body {
+  padding: 0;
+  margin: 0;
+  font-family: -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Oxygen,
+    Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue, sans-serif;
+    direction: rtl;
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+
+ul,li {
+  list-style: none;
+}
