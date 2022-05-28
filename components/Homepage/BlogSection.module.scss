@@ -1,0 +1,27 @@
+.section {
+  background: #ecf0f4;
+}
+
+.grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 0.85rem;
+}
+
+.grid_row {
+  display: grid;
+  grid-template-rows: 1fr 1fr;
+  gap: 0.85rem;
+}
+
+.grid_sub {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 0.85rem;
+}
+
+@media screen and (max-width: 992px) {
+  .grid {
+    grid-template-columns: 1fr;
+  }
+}

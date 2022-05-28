@@ -2,16 +2,22 @@
   box-sizing: border-box;
 }
 
-@font-face{font-family:'Icons';font-display:block;src:url("/assets/fonts/icons/icons.woff2?2610") format("woff2"),url("/assets/fonts/icons/icons.woff?2610") format("woff"),url("/assets/fonts/icons/icons.ttf?2610") format("truetype")}
-
+@font-face {
+  font-family: 'IRANSANS';
+  font-display: block;
+  src: url('/assets/fonts/IranSans/woff2/IRANSansWeb.woff2') format('woff2'),
+    url('/assets/fonts/IranSans/woff/IRANSansWeb.woff') format('woff'),
+    url('/assets/fonts/IranSans/ttf/IRANSansWeb.ttf') format('truetype');
+}
 
 html,
 body {
   padding: 0;
   margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Oxygen,
-    Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue, sans-serif;
-    direction: rtl;
+  font-family: 'IRANSANS', Segoe UI, Roboto, Oxygen, Ubuntu, Cantarell,
+    Fira Sans, Droid Sans, Helvetica Neue, sans-serif;
+  direction: rtl;
+  overflow-x: hidden;
 }
 
 a {
@@ -19,7 +25,23 @@ a {
   text-decoration: none;
 }
 
-
-ul,li {
+ul,
+li {
   list-style: none;
+}
+
+.section-container {
+  padding: 3rem 0;
+}
+
+div.coin-ico {
+  background-size: auto 100%;
+  float: none;
+  height: 2em;
+  text-align: center;
+  width: 2em;
+  display: inline-block;
+  vertical-align: middle;
+  background-repeat: no-repeat;
+  background-position: center;
 }

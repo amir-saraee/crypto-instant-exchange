@@ -1,0 +1,33 @@
+.card {
+  height: 195px;
+}
+
+.head {
+  font-size: 19px;
+  text-align: center;
+}
+
+.body {
+  text-align: justify;
+}
+
+.social {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.social a {
+  margin: 0 2px;
+}
+
+@media screen and (max-width: 800px) {
+  .card {
+    margin-bottom: 1rem;
+    height: auto;
+  }
+}
+@media screen and (max-width: 1400px) {
+  .card {
+    height: auto;
+  }
+}

@@ -1,6 +1,11 @@
 import type { NextPage } from 'next'
 import Head from 'next/head'
+import BlogSection from '../components/Homepage/BlogSection'
+import FAQ from '../components/Homepage/FAQ'
+import Services from '../components/Homepage/Services'
 import ShowCase from '../components/Homepage/ShowCase'
+import Transactions from '../components/Homepage/Transactions'
+import Footer from '../components/shared/Footer'
 
 const Home: NextPage = () => {
   return (
@@ -12,6 +17,11 @@ const Home: NextPage = () => {
       </Head>
 
       <ShowCase />
+      <Services />
+      <Transactions />
+      <FAQ />
+      <BlogSection />
+      <Footer />
     </div>
   )
 }
