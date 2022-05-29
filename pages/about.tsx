@@ -1,5 +1,6 @@
 import type { NextPage } from 'next'
 import Head from 'next/head'
+import Footer from '../components/shared/Footer'
 import Header from '../components/shared/PageHeader'
 import Styles from '../styles/about.module.scss'
 
@@ -87,6 +88,8 @@ const About: NextPage = () => {
           </div>
         </div>
       </main>
+
+      <Footer />
     </div>
   )
 }

@@ -1,0 +1,50 @@
+.faq {
+  & ol:not(.list) {
+    list-style-type: none;
+    counter-reset: section;
+  }
+
+  & ol li::before {
+    content: counters(section, '.') '. ';
+    counter-increment: section;
+    padding-right: 0.225em;
+  }
+
+  & > ol > li {
+    padding: 1rem 0;
+  }
+  & > ol > li > a {
+    padding-bottom: 1rem;
+    color: red;
+    display: inline-block;
+  }
+  & > ol > li a {
+    color: #0171a6;
+  }
+}
+
+.faq_content {
+  & ol:not(.list) {
+    list-style-type: none;
+    counter-reset: section;
+  }
+
+  & ol > li > h4::before {
+    content: counters(section, '.') '. ';
+    counter-increment: section;
+  }
+
+  & ol > li > ol > li {
+    padding: 0.75rem 0;
+  }
+
+  & ol > li > ol > li > h5::before {
+    content: counters(section, '.') '. ';
+    counter-increment: section;
+  }
+
+  & ol > li > ol > li p {
+    font-weight: 300;
+    color: #5c5c5c;
+  }
+}

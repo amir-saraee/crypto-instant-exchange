@@ -9,10 +9,10 @@ function Navbar() {
           <Link href='/about'>درباره ما</Link>
         </li>
         <li>
-          <Link href=''>وبلاگ</Link>
+          <Link href='/blog'>وبلاگ</Link>
         </li>
         <li>
-          <Link href=''>سوالات متداول</Link>
+          <Link href='/faq'>سوالات متداول</Link>
         </li>
         <li>
           <Link href=''>API</Link>
