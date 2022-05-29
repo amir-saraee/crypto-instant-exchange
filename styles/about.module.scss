@@ -1,0 +1,18 @@
+.coins {
+  & ul {
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+    text-align: center;
+  }
+
+  & li {
+    width: 33%;
+    padding: 1rem 0;
+  }
+
+  & ul li > span {
+    margin-top: 0.5rem;
+    display: block;
+  }
+}

@@ -1,0 +1,27 @@
+.header {
+  background: linear-gradient(
+      0deg,
+      rgba(40, 100, 144, 0.68) 0,
+      rgba(6, 87, 144, 0.56) 210%
+    ),
+    url(/bg-min.jpg);
+  position: fixed;
+  top: 0;
+  right: 0;
+  height: 65px;
+  width: 100vw;
+  z-index: 99;
+}
+
+.logo {
+  display: flex;
+  align-items: center;
+
+  & h1 {
+    margin-bottom: 0;
+  }
+  & a {
+    color: #fff;
+    text-decoration: none;
+  }
+}

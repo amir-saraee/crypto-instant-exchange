@@ -6,7 +6,7 @@ function Navbar() {
     <nav className={styles.nav}>
       <ul>
         <li>
-          <Link href=''>درباره ما</Link>
+          <Link href='/about'>درباره ما</Link>
         </li>
         <li>
           <Link href=''>وبلاگ</Link>

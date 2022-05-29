@@ -18,6 +18,7 @@ body {
     Fira Sans, Droid Sans, Helvetica Neue, sans-serif;
   direction: rtl;
   overflow-x: hidden;
+  position: relative;
 }
 
 a {
@@ -44,4 +45,38 @@ div.coin-ico {
   vertical-align: middle;
   background-repeat: no-repeat;
   background-position: center;
+}
+
+.main {
+  background: #ecf0f4;
+  padding-top: 65px;
+}
+
+.page-title {
+  padding: 2rem 0;
+  text-align: center;
+
+  & h2 {
+    font-size: 3rem;
+  }
+}
+
+.content-box {
+  max-width: 720px;
+  margin: 0 auto;
+  background-color: #fff;
+  padding: 2rem 3.5rem;
+  border-radius: 0.3rem;
+
+  & h4 {
+    text-align: center;
+    margin: 3rem 0 1rem 0;
+  }
+
+  & p {
+    text-align: justify;
+    font-size: 15px;
+    font-weight: 300;
+    line-height: 1.5;
+  }
 }

@@ -7,7 +7,9 @@ import {
 } from 'react-icons/ai'
 import { BsTelegram } from 'react-icons/bs'
 import { FaBitcoin } from 'react-icons/fa'
+import { HiArrowLeft } from 'react-icons/hi'
 import Styles from './FAQ.module.scss'
+import Link from 'next/link'
 
 function FAQ() {
   return (
@@ -76,6 +78,13 @@ function FAQ() {
           </Card>
         </Col>
       </Row>
+      <div className='d-flex justify-content-end'>
+        <Link href=''>
+          <span className={Styles.page_link}>
+            رفتن به صفحه سوالات متداول <HiArrowLeft />
+          </span>
+        </Link>
+      </div>
     </Container>
   )
 }
