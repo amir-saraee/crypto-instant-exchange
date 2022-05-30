@@ -1,7 +1,25 @@
+import { useState } from 'react'
 import Link from 'next/link'
+import { Modal } from 'reactstrap'
 import styles from './Navbar.module.scss'
+import AuthModal from './AuthModal'
 
 function Navbar() {
+  const [modalIsOpen, setModalIspOpen] = useState(false)
+  const [typeAuth, setTypeAuth] = useState('')
+
+  const toggleModal = () => setModalIspOpen((prev) => !prev)
+
+  const loginHandler = () => {
+    setModalIspOpen(true)
+    setTypeAuth('login')
+  }
+
+  const signUpHandler = () => {
+    setModalIspOpen(true)
+    setTypeAuth('signup')
+  }
+
   return (
     <nav className={styles.nav}>
       <ul>
@@ -23,13 +41,15 @@ function Navbar() {
       </ul>
       <div className={styles.separate}></div>
       <div>
-        <button type='button' className={styles.button}>
+        <button type='button' className={styles.button} onClick={loginHandler}>
           ورود
         </button>
-        <button type='button' className={styles.button}>
+        <button type='button' className={styles.button} onClick={signUpHandler}>
           ثبت نام
         </button>
       </div>
+
+      <AuthModal open={modalIsOpen} type={typeAuth} toggle={toggleModal} />
     </nav>
   )
 }
