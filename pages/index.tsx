@@ -9,7 +9,7 @@ import Footer from '../components/shared/Footer'
 
 const Home: NextPage = () => {
   return (
-    <div>
+    <>
       <Head>
         <title>صفحه اصلی سایت</title>
         <meta name='description' content='این توضیحات صفحه اصلی سایت است.' />
@@ -22,7 +22,7 @@ const Home: NextPage = () => {
       <FAQ />
       <BlogSection />
       <Footer />
-    </div>
+    </>
   )
 }
 

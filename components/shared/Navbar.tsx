@@ -33,7 +33,7 @@ function Navbar() {
           <Link href='/faq'>سوالات متداول</Link>
         </li>
         <li>
-          <Link href=''>API</Link>
+          <Link href='/terms'>شرایط استفاده از خدمات </Link>
         </li>
         <li>
           <Link href=''>پشتیبانی</Link>
