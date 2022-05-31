@@ -1,4 +1,4 @@
-.header {
+@mixin header {
   background: linear-gradient(
       0deg,
       rgba(40, 100, 144, 0.68) 0,
@@ -13,6 +13,10 @@
   z-index: 99;
 }
 
+.header {
+  @include header;
+}
+
 .logo {
   display: flex;
   align-items: center;
@@ -23,5 +27,35 @@
   & a {
     color: #fff;
     text-decoration: none;
+  }
+}
+
+.header_mobile {
+  display: none;
+}
+
+@media screen and (max-width: 992px) {
+  .header {
+    display: none;
+  }
+  .header_mobile {
+    display: block;
+    position: relative;
+    @include header;
+  }
+  .menu_btn {
+    position: absolute;
+    top: 1.5rem;
+    right: 1rem;
+    cursor: pointer;
+
+    & span {
+      display: block;
+      width: 17px;
+      height: 3px;
+      margin-bottom: 3px;
+      border-radius: 1.5px;
+      background-color: #fff;
+    }
   }
 }

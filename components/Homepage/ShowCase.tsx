@@ -13,6 +13,13 @@ function ShowCase() {
         </div>
         <Navbar />
       </header>
+      <header className={styles.header_mobile}>
+        <div className={styles.menu_btn}>
+          <span></span>
+          <span></span>
+          <span></span>
+        </div>
+      </header>
     </section>
   )
 }

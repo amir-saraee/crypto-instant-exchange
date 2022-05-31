@@ -1,24 +1,55 @@
 .section {
-    background-image: linear-gradient(-200deg,rgba(11,75,121,0.54) 0,#000810 100%),url(/bg-min.jpg);
-    background-color: #324654;
-    background-size: cover;
-    background-repeat: no-repeat;
-    position: relative;
-    color: #fff;
-    height: 590px;
+  background-image: linear-gradient(
+      -200deg,
+      rgba(11, 75, 121, 0.54) 0,
+      #000810 100%
+    ),
+    url(/bg-min.jpg);
+  background-color: #324654;
+  background-size: cover;
+  background-repeat: no-repeat;
+  position: relative;
+  color: #fff;
+  height: 590px;
 }
 
 .header {
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    padding: 1rem 3rem;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 1rem 3rem;
+}
+
+.header_mobile {
+  display: none;
 }
 
 .logo {
-    & a {
-        color: #fff;
-        text-decoration: none;
-    }
+  & a {
+    color: #fff;
+    text-decoration: none;
+  }
 }
 
+@media screen and (max-width: 992px) {
+  .header {
+    display: none;
+  }
+  .header_mobile {
+    display: block;
+    position: relative;
+  }
+  .menu_btn {
+    position: absolute;
+    right: 1rem;
+    top: 1rem;
+    cursor: pointer;
+  }
+  .menu_btn span {
+    width: 17px;
+    height: 3px;
+    display: block;
+    margin-bottom: 4px;
+    background-color: #fff;
+  }
+}
