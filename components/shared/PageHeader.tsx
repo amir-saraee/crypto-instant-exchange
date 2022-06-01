@@ -1,6 +1,7 @@
 import Link from 'next/link'
 import { useContext } from 'react'
 import { Container } from 'reactstrap'
+import AuthContext from '../../pages/store/auth-context'
 import MenuContext from '../../pages/store/menu-context'
 import Navbar from './Navbar'
 import NavigationMobile from './NavigationMobile'
@@ -8,6 +9,7 @@ import Classes from './PageHeader.module.scss'
 
 const Header = () => {
   const { toggleMenu, menu } = useContext(MenuContext)
+  const { user, userIsLoggedIn } = useContext(AuthContext)
 
   return (
     <>
@@ -19,7 +21,7 @@ const Header = () => {
                 <Link href='/'>لوگو</Link>
               </h1>
             </div>
-            <Navbar />
+            <Navbar user={user} userIsLoggedIn={userIsLoggedIn} />
           </div>
         </Container>
       </header>

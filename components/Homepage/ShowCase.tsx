@@ -1,5 +1,6 @@
 import Link from 'next/link'
 import { useContext } from 'react'
+import AuthContext from '../../pages/store/auth-context'
 import MenuContext from '../../pages/store/menu-context'
 import Navbar from '../shared/Navbar'
 import NavigationMobile from '../shared/NavigationMobile'
@@ -7,6 +8,7 @@ import Classes from './ShowCase.module.scss'
 
 function ShowCase() {
   const { toggleMenu, menu } = useContext(MenuContext)
+  const { user, userIsLoggedIn } = useContext(AuthContext)
 
   return (
     <section className={Classes.section}>
@@ -16,7 +18,7 @@ function ShowCase() {
             <Link href='/'>لوگو</Link>
           </h1>
         </div>
-        <Navbar />
+        <Navbar user={user} userIsLoggedIn={userIsLoggedIn} />
       </header>
       <header className={Classes.header_mobile}>
         <div

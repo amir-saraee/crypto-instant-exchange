@@ -3,12 +3,15 @@ import { MenuContextProvider } from './store/menu-context'
 import 'bootstrap/dist/css/bootstrap.min.css'
 import '../styles/svg.scss'
 import '../styles/globals.scss'
+import { AuthContextProvider } from './store/auth-context'
 
 function MyApp({ Component, pageProps }: AppProps) {
   return (
-    <MenuContextProvider>
-      <Component {...pageProps} />
-    </MenuContextProvider>
+    <AuthContextProvider>
+      <MenuContextProvider>
+        <Component {...pageProps} />
+      </MenuContextProvider>
+    </AuthContextProvider>
   )
 }
 

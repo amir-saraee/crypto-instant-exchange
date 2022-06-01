@@ -1,12 +1,17 @@
-import { useState } from 'react'
+import React, { useRef, useState } from 'react'
 import Link from 'next/link'
-import { Modal } from 'reactstrap'
-import styles from './Navbar.module.scss'
+import Classes from './Navbar.module.scss'
 import AuthModal from './AuthModal'
+import useOnClickOutside from '../../utils/hooks/useOutsideAlerter'
 
-function Navbar() {
+const Navbar: React.FC<{ user: {}; userIsLoggedIn: boolean }> = ({
+  user,
+  userIsLoggedIn
+}) => {
   const [modalIsOpen, setModalIspOpen] = useState(false)
   const [typeAuth, setTypeAuth] = useState('')
+  const [showUserAccount, setShowUserAccount] = useState(false)
+  const ref = useRef(null)
 
   const toggleModal = () => setModalIspOpen((prev) => !prev)
 
@@ -20,8 +25,12 @@ function Navbar() {
     setTypeAuth('signup')
   }
 
+  useOnClickOutside(ref, () => {
+    setShowUserAccount(false)
+  })
+
   return (
-    <nav className={styles.nav}>
+    <nav className={Classes.nav}>
       <ul>
         <li>
           <Link href='/about'>درباره ما</Link>
@@ -39,16 +48,55 @@ function Navbar() {
           <Link href=''>پشتیبانی</Link>
         </li>
       </ul>
-      <div className={styles.separate}></div>
-      <div>
-        <button type='button' className={styles.button} onClick={loginHandler}>
-          ورود
-        </button>
-        <button type='button' className={styles.button} onClick={signUpHandler}>
-          ثبت نام
-        </button>
-      </div>
-
+      <div className={Classes.separate}></div>
+      {userIsLoggedIn ? (
+        <div className={Classes.account}>
+          <button
+            type='button'
+            onClick={() => setShowUserAccount((prevState) => !prevState)}
+          >
+            پروفایل
+          </button>
+          {showUserAccount && (
+            <div ref={ref}>
+              <ul>
+                <li>
+                  <Link href='/'>
+                    <a>تاریخچه سفارشات</a>
+                  </Link>
+                </li>
+                <li>
+                  <Link href='/'>
+                    <a>تنظیمات</a>
+                  </Link>
+                </li>
+                <li>
+                  <Link href='/'>
+                    <a>خروج</a>
+                  </Link>
+                </li>
+              </ul>
+            </div>
+          )}
+        </div>
+      ) : (
+        <div>
+          <button
+            type='button'
+            className={Classes.button}
+            onClick={loginHandler}
+          >
+            ورود
+          </button>
+          <button
+            type='button'
+            className={Classes.button}
+            onClick={signUpHandler}
+          >
+            ثبت نام
+          </button>
+        </div>
+      )}
       <AuthModal open={modalIsOpen} type={typeAuth} toggle={toggleModal} />
     </nav>
   )
