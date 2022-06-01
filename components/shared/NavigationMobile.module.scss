@@ -1,0 +1,39 @@
+.nav {
+  position: fixed;
+  right: 0;
+  top: 0;
+  bottom: 0;
+  background-color: #051f2b;
+  -moz-transition: all 0.3s ease 0s;
+  transition: all 0.3s ease 0s;
+  will-change: opacity, transform;
+  transform: translate(100%, 0);
+  width: 75%;
+
+  &.active {
+    transform: translate(0, 0);
+  }
+
+  & > div {
+    margin-top: 4rem;
+    border-top: 1px solid #484d53;
+  }
+
+  & > div > ul {
+    padding: 0;
+  }
+  & > div > ul > li {
+    padding: 0.5rem 2rem;
+  }
+  & > div > ul > li.head {
+    padding-top: 2rem;
+    opacity: 0.6;
+  }
+  & > div > ul > li span {
+    cursor: pointer;
+    color: #fff;
+  }
+  & > div > ul > li a {
+    color: #fff;
+  }
+}

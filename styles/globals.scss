@@ -85,3 +85,13 @@ div.coin-ico {
 .nav-tabs .nav-link {
   border: 0;
 }
+
+.shadow-body {
+  position: fixed;
+  right: 0;
+  left: 0;
+  top: 0;
+  bottom: 0;
+  background: rgba(0, 0, 0, 0.703);
+  z-index: 200;
+}

@@ -127,8 +127,8 @@ function Transactions() {
           <h2>معاملات اخیر</h2>
         </div>
         <Row>
-          {transactions.map((t) => (
-            <Col key={t.id} md={6} sm={12}>
+          {transactions.map((t, index) => (
+            <Col key={index + t.id} md={6} sm={12}>
               <div className={Styles.transaction}>
                 <span>{t.date}</span>
                 <div className={Styles.t_coins}>

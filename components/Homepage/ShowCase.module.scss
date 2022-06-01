@@ -38,12 +38,18 @@
   .header_mobile {
     display: block;
     position: relative;
+    z-index: 201;
+  }
+  .logo_mobile {
+    text-align: center;
+    padding: 1rem;
   }
   .menu_btn {
     position: absolute;
-    right: 1rem;
-    top: 1rem;
+    right: 1.5rem;
+    top: 1.5rem;
     cursor: pointer;
+    z-index: 202;
   }
   .menu_btn span {
     width: 17px;
@@ -51,5 +57,26 @@
     display: block;
     margin-bottom: 4px;
     background-color: #fff;
+    -moz-transition: transform 0.6s ease, opacity 0.6s ease,
+      background-color 0.3s ease;
+    transition: transform 0.6s ease, opacity 0.6s ease,
+      background-color 0.3s ease;
+    will-change: transform, background-color;
+  }
+  .menu_btn span:first-child {
+    transform-origin: 2px 1px 0;
+  }
+  .menu_btn span:last-child {
+    transform-origin: 2px 1px 0;
+  }
+  .active span:first-child {
+    transform: rotateZ(45deg) scaleX(1.5) scaleY(0.7);
+  }
+  .active span:nth-child(2) {
+    transform: rotateX(90deg);
+    opacity: 0;
+  }
+  .active span:last-child {
+    transform: rotateZ(-45deg) scaleX(1.5) scaleY(0.7);
   }
 }
