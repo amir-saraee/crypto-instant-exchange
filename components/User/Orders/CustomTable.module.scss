@@ -1,0 +1,32 @@
+.table {
+  text-align: center;
+  font-size: 13px;
+}
+
+.pagination {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+
+  & > div > button {
+    cursor: pointer;
+    background-color: transparent;
+    border: 1px solid #eaeaea;
+    border-radius: 5px 0 0 5px;
+  }
+  & > div > button:hover {
+    background-color: #0173a7;
+    color: #fff;
+    border: 0;
+  }
+}
+
+.select {
+  display: flex;
+  align-items: center;
+  font-size: 12px;
+
+  & span {
+    margin: 0 5px;
+  }
+}

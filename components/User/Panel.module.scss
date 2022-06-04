@@ -1,0 +1,58 @@
+.wrap {
+  display: flex;
+
+  & aside {
+    width: 15rem;
+    margin-top: 1rem;
+  }
+  & aside ul {
+    padding: 0;
+  }
+  & aside li {
+    border-bottom: 1px solid #e6e6e6;
+  }
+  & aside li a {
+    color: #5d5d5d;
+    display: block;
+    padding: 0.9em 1em;
+    font-size: 14px;
+  }
+  & aside li a:hover {
+    color: #000;
+  }
+  & .active {
+    background: #0171a6;
+    color: #fff;
+    border-radius: 3px;
+  }
+  & .active:hover {
+    color: #fff;
+  }
+  .logout {
+    color: #e41c1c;
+  }
+}
+
+.main {
+  border-right: 1px solid #0171a6;
+  padding-right: 2rem;
+  width: 100%;
+}
+
+@media screen and (max-width: 992px) {
+  .wrap {
+    flex-wrap: wrap;
+
+    & aside {
+      width: 100%;
+      margin-bottom: 2rem;
+      text-align: center;
+      border-bottom: 1px solid #0171a6;
+    }
+  }
+
+  .main {
+    padding-right: 0;
+    border-right: 0;
+  }
+}

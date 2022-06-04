@@ -7,8 +7,8 @@ const Terms: NextPage = () => {
   return (
     <div>
       <Head>
-        <title>درباره ما</title>
-        <meta name='description' content='صفحه درباره ما' />
+        <title>شرایط استفاده از سایت</title>
+        <meta name='description' content='صفحه شرایط استفاده از سایت' />
       </Head>
 
       <Header />

@@ -61,12 +61,12 @@ const Navbar: React.FC<{ user: {}; userIsLoggedIn: boolean }> = ({
             <div ref={ref}>
               <ul>
                 <li>
-                  <Link href='/'>
+                  <Link href='/user/orders'>
                     <a>تاریخچه سفارشات</a>
                   </Link>
                 </li>
                 <li>
-                  <Link href='/'>
+                  <Link href='/user/profile'>
                     <a>تنظیمات</a>
                   </Link>
                 </li>
