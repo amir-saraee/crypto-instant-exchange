@@ -4,6 +4,7 @@ import AuthContext from '../../pages/store/auth-context'
 import MenuContext from '../../pages/store/menu-context'
 import Navbar from '../shared/Navbar'
 import NavigationMobile from '../shared/NavigationMobile'
+import Exchange from './Exchange'
 import Classes from './ShowCase.module.scss'
 
 function ShowCase() {
@@ -38,6 +39,11 @@ function ShowCase() {
           </h1>
         </div>
       </header>
+
+      <div className={Classes.exchange_wrap}>
+        <h2>صرافی ارز دیجیتال لایتنینگ</h2>
+        <Exchange />
+      </div>
     </section>
   )
 }
