@@ -10,11 +10,11 @@
   right: 0;
   height: 65px;
   width: 100vw;
-  z-index: 99;
 }
 
 .header {
   @include header;
+  z-index: 90;
 }
 
 .logo {
@@ -41,13 +41,24 @@
   .header_mobile {
     display: block;
     position: relative;
+    z-index: 201;
+
     @include header;
+  }
+  .logo_mobile {
+    text-align: center;
+    padding: 1rem;
+
+    & h1 {
+      color: #fff;
+    }
   }
   .menu_btn {
     position: absolute;
     top: 1.5rem;
     right: 1rem;
     cursor: pointer;
+    z-index: 202;
 
     & span {
       display: block;
@@ -56,6 +67,34 @@
       margin-bottom: 3px;
       border-radius: 1.5px;
       background-color: #fff;
+    }
+    .menu_btn span {
+      width: 17px;
+      height: 3px;
+      display: block;
+      margin-bottom: 4px;
+      background-color: #fff;
+      -moz-transition: transform 0.6s ease, opacity 0.6s ease,
+        background-color 0.3s ease;
+      transition: transform 0.6s ease, opacity 0.6s ease,
+        background-color 0.3s ease;
+      will-change: transform, background-color;
+    }
+    .menu_btn span:first-child {
+      transform-origin: 2px 1px 0;
+    }
+    .menu_btn span:last-child {
+      transform-origin: 2px 1px 0;
+    }
+    .active span:first-child {
+      transform: rotateZ(45deg) scaleX(1.5) scaleY(0.7);
+    }
+    .active span:nth-child(2) {
+      transform: rotateX(90deg);
+      opacity: 0;
+    }
+    .active span:last-child {
+      transform: rotateZ(-45deg) scaleX(1.5) scaleY(0.7);
     }
   }
 }

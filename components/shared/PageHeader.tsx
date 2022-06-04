@@ -1,28 +1,46 @@
 import Link from 'next/link'
+import { useContext } from 'react'
 import { Container } from 'reactstrap'
+import AuthContext from '../../store/auth-context'
+import MenuContext from '../../store/menu-context'
 import Navbar from './Navbar'
-import Styles from './PageHeader.module.scss'
+import NavigationMobile from './NavigationMobile'
+import Classes from './PageHeader.module.scss'
 
 const Header = () => {
+  const { toggleMenu, menu } = useContext(MenuContext)
+  const { user, userIsLoggedIn } = useContext(AuthContext)
+
   return (
     <>
-      <header className={Styles.header}>
+      <header className={Classes.header}>
         <Container className='h-100'>
           <div className='d-flex justify-content-between h-100'>
-            <div className={Styles.logo}>
+            <div className={Classes.logo}>
               <h1>
                 <Link href='/'>لوگو</Link>
               </h1>
             </div>
-            <Navbar />
+            <Navbar user={user} userIsLoggedIn={userIsLoggedIn} />
           </div>
         </Container>
       </header>
-      <header className={Styles.header_mobile}>
-        <div className={Styles.menu_btn}>
+      <header className={Classes.header_mobile}>
+        <div
+          className={`${Classes.menu_btn} ${menu && Classes.active}`}
+          onClick={() => toggleMenu()}
+        >
           <span></span>
           <span></span>
           <span></span>
+        </div>
+        <NavigationMobile active={(menu && 'active') || ''} />
+        <div className={Classes.logo_mobile}>
+          <h1>
+            <Link href='/'>
+              <a>لوگو</a>
+            </Link>
+          </h1>
         </div>
       </header>
     </>

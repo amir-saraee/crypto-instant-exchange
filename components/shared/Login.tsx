@@ -1,7 +1,8 @@
-import React from 'react'
+import React, { useContext } from 'react'
 import { Form } from 'reactstrap'
 import { useForm, SubmitHandler } from 'react-hook-form'
 import Styles from './AuthModal.module.scss'
+import AuthContext from '../../store/auth-context'
 
 type FormValues = {
   email: string
@@ -16,9 +17,10 @@ const Login: React.FC<{ setActiveTab: (value: string) => void }> = ({
     handleSubmit,
     formState: { errors }
   } = useForm<FormValues>()
+  const { login } = useContext(AuthContext)
 
-  const loginSubmit: SubmitHandler<FormValues> = (data) => {
-    console.log(data, errors)
+  const loginSubmit: SubmitHandler<FormValues> = async (data) => {
+    login('sddsisdidsdijh', { email: data.email, password: data.password })
   }
 
   return (

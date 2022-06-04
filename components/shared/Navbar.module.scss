@@ -46,3 +46,36 @@
     text-decoration: underline;
   }
 }
+
+.account {
+  position: relative;
+
+  & button {
+    background: none;
+    border: 0;
+    color: #fff;
+  }
+
+  & > div {
+    position: absolute;
+    top: 2.5rem;
+    right: -5rem;
+  }
+  & > div > ul {
+    background: #fff;
+    width: 160px;
+    padding: 0.6rem;
+    transition: visibility 0s ease 0.15s, opacity 0.15s ease, margin 0.15s ease;
+    display: block;
+    border-radius: 0.3rem;
+  }
+
+  & > div ul li a {
+    color: #394247;
+    font-size: 14px;
+    line-height: 3em;
+  }
+  & > div ul li a:hover {
+    color: #f7931a;
+  }
+}
