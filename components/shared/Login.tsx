@@ -2,7 +2,7 @@ import React, { useContext } from 'react'
 import { Form } from 'reactstrap'
 import { useForm, SubmitHandler } from 'react-hook-form'
 import Styles from './AuthModal.module.scss'
-import AuthContext from '../../pages/store/auth-context'
+import AuthContext from '../../store/auth-context'
 
 type FormValues = {
   email: string

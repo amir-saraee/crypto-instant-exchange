@@ -8,7 +8,7 @@ import Services from '../components/Homepage/Services'
 import ShowCase from '../components/Homepage/ShowCase'
 import Transactions from '../components/Homepage/Transactions'
 import Footer from '../components/shared/Footer'
-import MenuContext from './store/menu-context'
+import MenuContext from '../store/menu-context'
 
 const Home: NextPage = () => {
   const { menu, toggleMenu } = useContext(MenuContext)

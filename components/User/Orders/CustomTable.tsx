@@ -23,25 +23,35 @@ const SelectOptions = [
   }
 ]
 
-function MainTable({ columns, data }) {
+const MainTable: React.FC<{ columns: any; data: any }> = ({
+  columns,
+  data
+}) => {
   // Use the state and functions returned from useTable to build your UI
   const {
     getTableProps,
     getTableBodyProps,
     headerGroups,
     prepareRow,
+    // @ts-ignore
     page, // Instead of using 'rows', we'll use page,
     // which has only the rows for the active page
 
     // The rest of these things are super handy, too ;)
+    // @ts-ignore
     canPreviousPage,
+    // @ts-ignore
     canNextPage,
+    // @ts-ignore
     pageCount,
+    // @ts-ignore
     gotoPage,
+    // @ts-ignore
     nextPage,
+    // @ts-ignore
     previousPage,
-    setPageSize,
-    state: { pageIndex, pageSize }
+    // @ts-ignore
+    setPageSize
   } = useTable(
     {
       columns,
