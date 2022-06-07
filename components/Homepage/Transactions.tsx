@@ -1,8 +1,7 @@
 import { Container, Col, Row } from 'reactstrap'
 import { BiTimeFive } from 'react-icons/bi'
-import { AiOutlineArrowLeft } from 'react-icons/ai'
 import { BsArrowLeft } from 'react-icons/bs'
-import Styles from './Transactions.module.scss'
+import Classes from './Transactions.module.scss'
 
 function Transactions() {
   const transactions = [
@@ -121,7 +120,7 @@ function Transactions() {
   ]
 
   return (
-    <section className={Styles.container}>
+    <section className={Classes.container}>
       <Container className='section-container'>
         <div className='text-center mb-4'>
           <h2>معاملات اخیر</h2>
@@ -129,9 +128,9 @@ function Transactions() {
         <Row>
           {transactions.map((t, index) => (
             <Col key={index + t.id} md={6} sm={12}>
-              <div className={Styles.transaction}>
+              <div className={Classes.transaction}>
                 <span>{t.date}</span>
-                <div className={Styles.t_coins}>
+                <div className={Classes.t_coins}>
                   <span>
                     {t.from.amount} {t.from.currency}
                   </span>
@@ -140,7 +139,7 @@ function Transactions() {
                   <div className={`coin-ico svgcoin ${t.to.icon}`}></div>
                   <span>{t.to.currency}</span>
                 </div>
-                <div className={Styles.timing}>
+                <div className={Classes.timing}>
                   <BiTimeFive />
                   <span>{t.time}</span>
                 </div>

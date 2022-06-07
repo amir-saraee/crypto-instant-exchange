@@ -96,3 +96,17 @@ div.coin-ico {
   background: rgba(0, 0, 0, 0.703);
   z-index: 200;
 }
+
+.main-full-bg {
+  width: 100%;
+  background-image: linear-gradient(
+      -200deg,
+      rgba(11, 75, 121, 0.54) 0,
+      #000810 100%
+    ),
+    url(/bg-min.jpg);
+  background-color: #324654;
+  position: relative;
+  background-size: cover;
+  height: 100vh;
+}

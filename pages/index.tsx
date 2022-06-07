@@ -4,6 +4,7 @@ import { useContext } from 'react'
 import { Button } from 'reactstrap'
 import BlogSection from '../components/Homepage/BlogSection'
 import FAQ from '../components/Homepage/FAQ'
+import Prices from '../components/Homepage/Prices'
 import Services from '../components/Homepage/Services'
 import ShowCase from '../components/Homepage/ShowCase'
 import Transactions from '../components/Homepage/Transactions'
@@ -25,6 +26,7 @@ const Home: NextPage = () => {
       <ShowCase />
       <Services />
       <Transactions />
+      <Prices />
       <FAQ />
       <BlogSection />
       <Footer />

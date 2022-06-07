@@ -1,0 +1,26 @@
+.container {
+  background-color: #ecf0f4;
+}
+
+.table {
+  background-color: #fff;
+  text-align: center;
+  font-size: 14px;
+  border-radius: 0.5rem;
+
+  .unit {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    img {
+      width: 32px;
+      height: 32px;
+    }
+    span {
+      margin-right: 1rem;
+      display: inline-block;
+      width: 50px;
+    }
+  }
+}
