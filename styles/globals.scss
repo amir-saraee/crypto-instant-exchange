@@ -108,5 +108,6 @@ div.coin-ico {
   background-color: #324654;
   position: relative;
   background-size: cover;
-  height: 100vh;
+  min-height: 100vh;
+  height: auto;
 }
