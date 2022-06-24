@@ -1,7 +1,31 @@
+import React, { useRef, useState } from 'react'
 import Link from 'next/link'
+import AuthModal from './AuthModal'
 import Classes from './NavigationMobile.module.scss'
+import useOnClickOutside from '../../utils/hooks/useOutsideAlerter'
 
 const NavigationMobile: React.FC<{ active: string }> = (props) => {
+  const [modalIsOpen, setModalIspOpen] = useState(false)
+  const [typeAuth, setTypeAuth] = useState('')
+  const [showUserAccount, setShowUserAccount] = useState(false)
+  const ref = useRef(null)
+
+  const toggleModal = () => setModalIspOpen((prev) => !prev)
+
+  const loginHandler = () => {
+    setModalIspOpen(true)
+    setTypeAuth('login')
+  }
+
+  const signUpHandler = () => {
+    setModalIspOpen(true)
+    setTypeAuth('signup')
+  }
+
+  useOnClickOutside(ref, () => {
+    setShowUserAccount(false)
+  })
+
   return (
     <nav className={`${Classes.nav} ${props.active && Classes.active}`}>
       <div>
@@ -10,10 +34,10 @@ const NavigationMobile: React.FC<{ active: string }> = (props) => {
             <span>حساب کاربری</span>
           </li>
           <li>
-            <span>ورود</span>
+            <span onClick={loginHandler}>ورود</span>
           </li>
           <li>
-            <span>ثبت نام</span>
+            <span onClick={signUpHandler}>ثبت نام</span>
           </li>
           <li className={Classes.head}>
             <span>FixedFloat</span>
@@ -35,6 +59,7 @@ const NavigationMobile: React.FC<{ active: string }> = (props) => {
           </li>
         </ul>
       </div>
+      <AuthModal open={modalIsOpen} type={typeAuth} toggle={toggleModal} />
     </nav>
   )
 }
