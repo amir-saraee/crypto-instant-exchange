@@ -1,0 +1,114 @@
+.wrap {
+  width: 100%;
+  background-color: #fff;
+  margin-bottom: 3rem;
+  padding: 1rem;
+  border-radius: 0.3rem;
+  position: relative;
+
+  h3 {
+    font-size: 1.3rem;
+    border-bottom: 1px dotted #ccc;
+    padding-bottom: 0.5rem;
+    font-weight: bold;
+  }
+
+  .inventory {
+    margin-top: 2rem;
+
+    > div {
+      font-size: 14px;
+      color: #454545;
+      margin-bottom: 5px;
+    }
+
+    > span {
+      font-weight: bold;
+    }
+  }
+
+  .links {
+    position: absolute;
+    left: 1rem;
+    bottom: 1rem;
+
+    > button {
+      font-size: 14px;
+      margin: 0 0.5rem;
+      border: 1px solid #4b75fa;
+      background: none;
+      color: #4b75fa;
+      padding: 5px 10px;
+      border-radius: 5px;
+
+      > span {
+        margin-right: 5px;
+      }
+    }
+  }
+
+  > .table {
+    td {
+      vertical-align: middle;
+      font-size: 14px;
+    }
+
+    .wallet_type {
+      svg {
+        margin-left: 3px;
+      }
+    }
+  }
+}
+
+.options {
+  display: flex;
+  justify-content: flex-end;
+  width: 100%;
+
+  div {
+    margin: 0 0.5rem;
+    color: #4b75fa;
+    cursor: pointer;
+
+    > span {
+      margin-right: 5px;
+      font-size: 14px;
+      font-weight: 600;
+    }
+  }
+}
+
+@media screen and (max-width: 992px) {
+  .wrap {
+    .inventory {
+      margin-bottom: 3rem;
+    }
+
+    .table {
+      font-size: 12px;
+      td {
+        svg {
+          width: 18px;
+          height: 18px;
+        }
+      }
+    }
+  }
+
+  .options {
+    display: flex;
+    justify-content: flex-end;
+    width: 100%;
+
+    div {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      flex-direction: column;
+      > span {
+        font-size: 8px;
+      }
+    }
+  }
+}

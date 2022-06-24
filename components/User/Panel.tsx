@@ -20,6 +20,13 @@ const Panel: React.FC<{ children?: React.ReactNode; active?: string }> = ({
               </Link>
             </li>
             <li>
+              <Link href='/user/wallet'>
+                <a className={active === 'wallet' ? Classes.active : ''}>
+                  کیف پول
+                </a>
+              </Link>
+            </li>
+            <li>
               <Link href='/user/orders'>
                 <a className={active === '2' ? Classes.active : ''}>
                   تاریخچه سفارشات
