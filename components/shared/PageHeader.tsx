@@ -1,5 +1,5 @@
 import Link from 'next/link'
-import { useContext } from 'react'
+import React, { useContext } from 'react'
 import { Container } from 'reactstrap'
 import AuthContext from '../../store/auth-context'
 import MenuContext from '../../store/menu-context'
@@ -7,13 +7,13 @@ import Navbar from './Navbar'
 import NavigationMobile from './NavigationMobile'
 import Classes from './PageHeader.module.scss'
 
-const Header = () => {
+const Header: React.FC<{ hideBg?: boolean }> = ({ hideBg }) => {
   const { toggleMenu, menu } = useContext(MenuContext)
   const { user, userIsLoggedIn } = useContext(AuthContext)
 
   return (
     <>
-      <header className={Classes.header}>
+      <header className={`${Classes.header} ${hideBg && Classes.no_bg}`}>
         <Container className='h-100'>
           <div className='d-flex justify-content-between h-100'>
             <div className={Classes.logo}>
@@ -25,7 +25,7 @@ const Header = () => {
           </div>
         </Container>
       </header>
-      <header className={Classes.header_mobile}>
+      <header className={`${Classes.header_mobile} ${hideBg && Classes.no_bg}`}>
         <div
           className={`${Classes.menu_btn} ${menu && Classes.active}`}
           onClick={() => toggleMenu()}

@@ -41,6 +41,9 @@
 }
 
 @media screen and (max-width: 992px) {
+  .section {
+    height: auto;
+  }
   .header {
     display: none;
   }
@@ -87,5 +90,9 @@
   }
   .active span:last-child {
     transform: rotateZ(-45deg) scaleX(1.5) scaleY(0.7);
+  }
+
+  .exchange_wrap {
+    padding: 0 1rem;
   }
 }

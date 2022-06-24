@@ -266,3 +266,43 @@
     }
   }
 }
+
+@media screen and(max-width: 992px) {
+  .exchange_form {
+    width: 100%;
+    font-size: 14px;
+  }
+
+  .exchange_amounts {
+    height: 100%;
+
+    & > .exchange_amounts_input {
+      width: 100%;
+
+      header {
+        text-align: right;
+      }
+    }
+    .input_sub {
+      font-size: 10px !important;
+      flex-wrap: wrap;
+    }
+
+    & > .exchange_amounts_arrow {
+      width: 100%;
+      margin: 1rem 0;
+    }
+  }
+
+  .wallet {
+    margin: 3rem 0 2rem 0;
+  }
+
+  .exchange_btn {
+    button {
+      span {
+        padding: 0.7rem;
+      }
+    }
+  }
+}

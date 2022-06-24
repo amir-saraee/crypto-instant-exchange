@@ -10,6 +10,11 @@
   right: 0;
   height: 65px;
   width: 100vw;
+
+  &.no_bg {
+    background: none;
+    position: relative;
+  }
 }
 
 .header {

@@ -1,0 +1,74 @@
+.section {
+  margin: 2rem 0;
+
+  ul {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 0;
+
+    > li {
+      width: 25%;
+      position: relative;
+      text-align: center;
+      color: #fff;
+      opacity: 0.3;
+
+      &.active {
+        animation: changeOpacity 1.5s infinite;
+      }
+
+      &::after {
+        content: '';
+        width: 80%;
+        height: 2px;
+        background-color: #fff;
+        position: absolute;
+        left: -40%;
+        top: 40%;
+      }
+
+      &:last-child::after {
+        content: none;
+      }
+
+      > div {
+        display: flex;
+        align-items: center;
+        flex-direction: column;
+
+        label {
+          margin-top: 5px;
+        }
+      }
+    }
+  }
+}
+
+@keyframes changeOpacity {
+  0% {
+    opacity: 0.3;
+  }
+
+  100% {
+    opacity: 1;
+  }
+}
+
+@media screen and (max-width: 992px) {
+  .section {
+    ul {
+      > li {
+        &::after {
+          content: '';
+          width: 50%;
+          height: 2px;
+          background-color: #fff;
+          position: absolute;
+          left: -25%;
+          top: 40%;
+        }
+      }
+    }
+  }
+}
