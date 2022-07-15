@@ -1,14 +1,17 @@
 .card {
-  height: 195px;
-}
+  height: 230px;
+  border: 1px solid #f2f2f2;
+  padding: 1.5rem;
 
-.head {
-  font-size: 19px;
-  text-align: center;
-}
+  .head {
+    font-size: 19px;
+    text-align: center;
+    font-weight: 600;
+  }
 
-.body {
-  text-align: justify;
+  .body {
+    text-align: justify;
+  }
 }
 
 .social {
@@ -30,10 +33,23 @@
   .card {
     margin-bottom: 1rem;
     height: auto;
+    .head {
+      font-size: 16px;
+    }
+    .body {
+      font-size: 13px;
+    }
   }
 }
 @media screen and (max-width: 1400px) {
   .card {
     height: auto;
+    padding: 1rem;
+    .head {
+      font-size: 17px;
+    }
+    .body {
+      font-size: 14px;
+    }
   }
 }

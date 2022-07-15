@@ -43,7 +43,7 @@ function Footer() {
           </Col>
           <Col md={8}>
             <Row>
-              <Col md={4}>
+              <Col md={4} xs={4}>
                 <div className={Styles.menu}>
                   <h4>لینک ها</h4>
                   <ul>
@@ -62,7 +62,7 @@ function Footer() {
                   </ul>
                 </div>
               </Col>
-              <Col md={4}>
+              <Col md={4} xs={4}>
                 <div className={Styles.menu}>
                   <h4>لینک ها</h4>
                   <ul>
@@ -81,7 +81,7 @@ function Footer() {
                   </ul>
                 </div>
               </Col>
-              <Col md={4}>
+              <Col md={4} xs={4}>
                 <div className={Styles.menu}>
                   <h4>لینک ها</h4>
                   <ul>

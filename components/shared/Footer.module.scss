@@ -45,3 +45,26 @@
     color: #85c459;
   }
 }
+
+@media screen and (max-width: 640px) {
+  .menu {
+    text-align: center;
+    & h4 {
+      opacity: 0.5;
+      font-weight: 400;
+      font-size: 15px;
+      border-bottom: none;
+      padding-bottom: 5px;
+    }
+
+    & ul {
+      a {
+        font-size: 13px;
+      }
+    }
+  }
+
+  .social {
+    margin-bottom: 1rem;
+  }
+}

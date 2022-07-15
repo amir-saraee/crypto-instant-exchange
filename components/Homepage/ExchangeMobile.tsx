@@ -4,61 +4,61 @@ import { BsFillLightningChargeFill } from 'react-icons/bs'
 import { HiArrowLeft, HiArrowRight } from 'react-icons/hi'
 import { BiQrScan } from 'react-icons/bi'
 import { Button, Modal, ModalBody, ModalFooter, ModalHeader } from 'reactstrap'
-import Classes from './Exchange.module.scss'
 
-const Exchange = () => {
+import Classes from './ExchangeMobile.module.scss'
+
+const ExchangeMobile = () => {
   const [exchangeOption, setExchangeOption] = useState('fixed')
   const [modalIsOpen, setModalIsOpen] = useState(false)
 
   return (
-    <form className={Classes.exchange_form}>
-      <div className={Classes.exchange_amounts}>
+    <form className={Classes.form}>
+      <div className={Classes.exchange_amount}>
         <div className={Classes.exchange_amounts_input}>
-          <header>ارسال</header>
-          <div className={Classes.input_box}>
-            <input type='text' placeholder='from' defaultValue={0.0} />
-            <label htmlFor='' className={Classes.label_left}>
-              <AiFillCaretDown />
-              <span>BTC</span>
-              <span
-                className={`coin-img svgcoin btc ${Classes.coin_image}`}
-              ></span>
-            </label>
-          </div>
-          <div className={Classes.input_sub}>
-            <button type='button' title='lighting'>
-              <BsFillLightningChargeFill color='#9157ff' />
-              <span>لایتینگ</span>
-            </button>
-            <div>1 BTC ≈ 16.6549496 ETH</div>
+          <div className={Classes.exchange_input}>
+            <header>ارسال</header>
+            <div className={Classes.input_box}>
+              <input type='text' placeholder='from' defaultValue={0.0} />
+              <label htmlFor='' className={Classes.label_left}>
+                <AiFillCaretDown />
+                <span>BTC</span>
+                <span
+                  className={`coin-img svgcoin btc ${Classes.coin_image}`}
+                ></span>
+              </label>
+              <div className={Classes.input_sub}>
+                <span>$216</span>
+                <div>1 BTC ≈ 16.6549496 ETH</div>
+              </div>
+            </div>
           </div>
         </div>
         <div className={Classes.exchange_amounts_arrow}>
-          <header>$2501</header>
           <button type='button' title='change'>
-            <HiArrowLeft size={25} color='#f7931a' />
-            <HiArrowRight size={25} color='#53ae94' />
+            <HiArrowLeft size={20} color='#f7931a' />
+            <HiArrowRight size={20} color='#53ae94' />
           </button>
         </div>
         <div className={Classes.exchange_amounts_input}>
-          <header>دریافت</header>
-          <div className={Classes.input_box}>
-            <input
-              type='text'
-              placeholder='from'
-              defaultValue={0.0}
-              className={Classes.input_receive}
-            />
-            <label htmlFor='' className={Classes.label_right}>
-              <AiFillCaretDown />
-              <span>BTC</span>
-              <span
-                className={`coin-img svgcoin btc ${Classes.coin_image}`}
-              ></span>
-            </label>
-          </div>
-          <div className={Classes.input_sub}>
-            <div>1 BTC ≈ 16.6549496 ETH</div>
+          <div className={Classes.exchange_input}>
+            <header>دریافت</header>
+            <div className={Classes.input_box}>
+              <input type='text' placeholder='to' defaultValue={0.0} />
+              <label htmlFor='' className={Classes.label_left}>
+                <AiFillCaretDown />
+                <span>BTC</span>
+                <span
+                  className={`coin-img svgcoin btc ${Classes.coin_image}`}
+                ></span>
+              </label>
+              <div className={Classes.input_sub}>
+                <button type='button' title='lighting'>
+                  <BsFillLightningChargeFill color='#9157ff' />
+                  <span>لایتینگ</span>
+                </button>
+                <div>1 BTC ≈ 16.6549496 ETH</div>
+              </div>
+            </div>
           </div>
         </div>
       </div>
@@ -155,4 +155,4 @@ const Exchange = () => {
   )
 }
 
-export default Exchange
+export default ExchangeMobile

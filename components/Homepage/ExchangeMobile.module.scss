@@ -1,37 +1,27 @@
-.exchange_form {
-  margin-top: 2rem;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  flex-direction: column;
-  width: 800px;
-}
-
-.exchange_amounts {
-  display: flex;
-  align-items: center;
-  flex-wrap: wrap;
-  position: relative;
+.form {
   width: 100%;
-  height: 115px;
+  margin-top: 1rem;
 
-  & > div {
-    height: 100%;
+  .exchange_amount {
+    position: relative;
   }
 
-  & > .exchange_amounts_input {
-    width: 45%;
-    padding: 0 1rem;
+  .exchange_amounts_input {
+    margin-bottom: 2rem;
+  }
 
-    header {
-      text-align: center;
-      margin-bottom: 1rem;
+  .exchange_input {
+    display: flex;
+    align-items: center;
+
+    & > header {
       color: #bbb;
-      font-size: 1.3rem;
+      font-size: 15px;
+      width: 15%;
     }
 
     .input_box {
-      width: 100%;
+      width: 75%;
       position: relative;
 
       input {
@@ -41,7 +31,7 @@
         background: none;
         border-color: #f7931a;
         color: #f7931a;
-        font-size: 1.6rem;
+        font-size: 1rem;
         outline: none;
       }
       .input_receive {
@@ -50,10 +40,11 @@
       .label_left {
         position: absolute;
         left: 0.2rem;
-        top: 1rem;
+        top: 9%;
         display: flex;
         align-items: center;
         cursor: pointer;
+        font-size: 12px;
       }
       .label_right {
         position: absolute;
@@ -71,38 +62,34 @@
         margin-right: 2px;
       }
     }
+  }
 
-    .input_sub {
-      display: flex;
-      align-items: center;
-      justify-content: space-between;
-      margin-top: 3px;
-      font-size: 0.65rem;
+  .input_sub {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-top: 3px;
+    font-size: 0.65rem;
+    opacity: 0.7;
 
-      button {
-        background: none;
-        border: 0;
-        color: #fff;
-        padding: 0;
+    button {
+      background: none;
+      border: 0;
+      color: #fff;
+      padding: 0;
 
-        & > span {
-          border-bottom: 1px dashed;
-        }
+      & > span {
+        border-bottom: 1px dashed;
       }
     }
   }
-  & > .exchange_amounts_arrow {
-    width: 10%;
-    text-align: center;
 
-    header {
-      border-bottom: 1px dashed #bbb;
-      color: #bbb;
-      font-size: 1.3rem;
-    }
+  .exchange_amounts_arrow {
+    position: absolute;
+    left: -0.5rem;
+    top: 3rem;
 
     button {
-      margin-top: 2rem;
       display: flex;
       align-items: center;
       flex-direction: column;
@@ -117,6 +104,7 @@
 .wallet {
   margin-top: 1rem;
   width: 100%;
+  font-size: 14px;
 
   & > div {
     position: relative;
@@ -127,7 +115,6 @@
       border: 0;
       color: #fff;
       background: none;
-      text-align: center;
       outline: none;
     }
 
@@ -141,7 +128,7 @@
 
     div {
       position: absolute;
-      left: 0.3rem;
+      left: -0.5rem;
       top: -0.3rem;
     }
   }
@@ -156,11 +143,12 @@
   flex-direction: column;
 
   & > div {
-    width: 60%;
+    width: 100%;
     display: flex;
     justify-content: center;
     align-content: center;
     text-align: center;
+    font-size: 14px;
 
     label {
       position: relative;
@@ -233,6 +221,7 @@
 
 .exchange_btn {
   margin-top: 1rem;
+  margin-bottom: 2rem;
   width: 100%;
 
   button:disabled {
@@ -264,46 +253,6 @@
       padding: 0.7em 3em;
       text-transform: uppercase;
       width: 100%;
-    }
-  }
-}
-
-@media screen and(max-width: 640px) {
-  .exchange_form {
-    width: 100%;
-    font-size: 14px;
-  }
-
-  .exchange_amounts {
-    height: 100%;
-
-    & > .exchange_amounts_input {
-      width: 100%;
-
-      header {
-        text-align: right;
-      }
-    }
-    .input_sub {
-      font-size: 10px !important;
-      flex-wrap: wrap;
-    }
-
-    & > .exchange_amounts_arrow {
-      width: 100%;
-      margin: 1rem 0;
-    }
-  }
-
-  .wallet {
-    margin: 3rem 0 2rem 0;
-  }
-
-  .exchange_btn {
-    button {
-      span {
-        padding: 0.7rem;
-      }
     }
   }
 }
