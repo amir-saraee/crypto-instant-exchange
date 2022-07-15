@@ -3,8 +3,8 @@ import { AiFillCaretDown } from 'react-icons/ai'
 import { BsFillLightningChargeFill } from 'react-icons/bs'
 import { HiArrowLeft, HiArrowRight } from 'react-icons/hi'
 import { BiQrScan } from 'react-icons/bi'
-import Classes from './Exchange.module.scss'
 import { Button, Modal, ModalBody, ModalFooter, ModalHeader } from 'reactstrap'
+import Classes from './Exchange.module.scss'
 
 const Exchange = () => {
   const [exchangeOption, setExchangeOption] = useState('fixed')

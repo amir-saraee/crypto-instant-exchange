@@ -111,3 +111,9 @@ div.coin-ico {
   min-height: 100vh;
   height: auto;
 }
+
+@media screen and (max-width: 992px) {
+  .content-box {
+    padding: 2rem 0;
+  }
+}

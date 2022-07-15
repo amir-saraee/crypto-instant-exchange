@@ -2,6 +2,7 @@
   & ol:not(.list) {
     list-style-type: none;
     counter-reset: section;
+    padding: 0 1rem;
   }
 
   & ol li::before {
@@ -27,6 +28,7 @@
   & ol:not(.list) {
     list-style-type: none;
     counter-reset: section;
+    padding: 0 1rem;
   }
 
   & ol > li > h4::before {

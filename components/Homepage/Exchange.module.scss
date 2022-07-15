@@ -77,12 +77,13 @@
       align-items: center;
       justify-content: space-between;
       margin-top: 3px;
-      font-size: 0.75rem;
+      font-size: 0.65rem;
 
       button {
         background: none;
         border: 0;
         color: #fff;
+        padding: 0;
 
         & > span {
           border-bottom: 1px dashed;
@@ -267,7 +268,7 @@
   }
 }
 
-@media screen and(max-width: 992px) {
+@media screen and(max-width: 640px) {
   .exchange_form {
     width: 100%;
     font-size: 14px;

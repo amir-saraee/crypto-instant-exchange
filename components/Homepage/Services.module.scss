@@ -1,13 +1,39 @@
 .card {
-    text-align: center;
-}
+  text-align: center;
 
-.card h3 {
+  h3 {
     margin-bottom: 1rem;
-}
-
-.card p {
+  }
+  p {
     margin-top: 1rem;
     text-align: center;
     padding: 0 2rem;
+  }
+}
+
+.mobile {
+  display: flex;
+  align-items: center;
+  margin-bottom: 1rem;
+
+  &.second {
+    flex-direction: row-reverse;
+
+    > div {
+      text-align: center;
+    }
+  }
+
+  & > div {
+    width: 50%;
+
+    h3 {
+      font-size: 1.1rem;
+      font-weight: 600;
+    }
+    p {
+      font-size: 14px;
+      margin-top: 1rem;
+    }
+  }
 }

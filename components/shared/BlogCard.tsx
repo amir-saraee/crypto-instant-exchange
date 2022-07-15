@@ -12,10 +12,13 @@ type CardType = {
 
 const BlogCard: React.FC<CardType> = ({ image, title, description, type }) => {
   return (
-    <article className={`${Styles.grid_item} pb-2`}>
-      <Link href='#'>
-        <Image src={image} alt='blog post' className={Styles.img} />
-      </Link>
+    <article className={`${Styles.grid_item} `}>
+      <div>
+        <Link href='#'>
+          <Image src={image} alt='blog post' className={Styles.img} />
+        </Link>
+      </div>
+
       <div className={Styles.article_body}>
         <Link href='#'>
           <h3>{title}</h3>

@@ -2,14 +2,17 @@ import Link from 'next/link'
 import { useContext } from 'react'
 import AuthContext from '../../store/auth-context'
 import MenuContext from '../../store/menu-context'
+import useViewport from '../../utils/hooks/useViewport'
 import Navbar from '../shared/Navbar'
 import NavigationMobile from '../shared/NavigationMobile'
 import Exchange from './Exchange'
+import ExchangeMobile from './ExchangeMobile'
 import Classes from './ShowCase.module.scss'
 
 function ShowCase() {
   const { toggleMenu, menu } = useContext(MenuContext)
   const { user, userIsLoggedIn } = useContext(AuthContext)
+  const { width } = useViewport()
 
   return (
     <section className={Classes.section}>
@@ -42,7 +45,7 @@ function ShowCase() {
 
       <div className={Classes.exchange_wrap}>
         <h2>صرافی ارز دیجیتال لایتنینگ</h2>
-        <Exchange />
+        {width < 992 ? <ExchangeMobile /> : <Exchange />}
       </div>
     </section>
   )
